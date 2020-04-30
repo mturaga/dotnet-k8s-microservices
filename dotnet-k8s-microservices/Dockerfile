@@ -6,6 +6,7 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
+RUN ls
 COPY ["Products.API/Products.API.csproj", "Products.API/"]
 RUN dotnet restore "Products.API/Products.API.csproj"
 COPY . .
