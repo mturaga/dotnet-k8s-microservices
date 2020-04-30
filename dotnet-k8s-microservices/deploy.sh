@@ -1,9 +1,9 @@
 #!/bin/bash
 
 echo "Hello world!!"
-# TAG=$1
-# DOCKER_USERNAME=$2
-# DOCKER_PASSWORD=$3
+ TAG=$1
+ DOCKER_USERNAME=$2
+ DOCKER_PASSWORD=$3
 
 # echo $1
 
@@ -15,7 +15,7 @@ cd Products.API
  docker build -t repository/project:$TAG .
  docker tag repository/project:$TAG repository/project:latest
 
-# # Login to Docker Hub and upload images
+# # # Login to Docker Hub and upload images
  docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
  docker push repository/project:$TAG
  docker push repository/project:latest
