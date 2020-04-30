@@ -8,7 +8,7 @@ echo "Hello world!!"
 # echo $1
 
 # # Create publish artifact
-dotnet publish -c Release src
+dotnet publish -c Release 
 
 # # Build the Docker images
 # docker build -t repository/project:$TAG src/bin/Release/netcoreapp1.0/publish/.
