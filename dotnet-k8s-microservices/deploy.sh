@@ -12,7 +12,7 @@
 
 
 # # Build the Docker images
- docker build -t repository/project:$TAG .
+ docker build .
 #  docker tag repository/project:$TAG repository/project:latest
 
 # # # # Login to Docker Hub and upload images
