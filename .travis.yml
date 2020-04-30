@@ -11,4 +11,5 @@ script:
 deploy:
   - provider: script
     script: ./deploy.sh $TRAVIS_TAG $DOCKER_USERNAME $DOCKER_PASSWORD
- 
+    on:
+      branch: travis
