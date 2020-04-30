@@ -8,7 +8,7 @@ install:
   - cd dotnet-k8s-microservices && dotnet restore
 script:
   - docker build .
-  - 
+  - docker tag repository/project:$TAG repository/project:latest
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
   - docker push repository/project:$TAG
-  -  docker push repository/project:latest
+  - docker push repository/project:latest
