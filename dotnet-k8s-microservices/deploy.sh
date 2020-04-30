@@ -1,9 +1,9 @@
 #!/bin/bash
 
 
- TAG=$1
- DOCKER_USERNAME=$2
- DOCKER_PASSWORD=$3
+#  TAG=$1
+#  DOCKER_USERNAME=$2
+#  DOCKER_PASSWORD=$3
 
 # echo $1
 
