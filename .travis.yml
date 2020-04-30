@@ -1,9 +1,14 @@
 language: csharp
+services:
+  - docker
 mono: none
 dist: xenial
 dotnet: 3.1
 install:
   - cd dotnet-k8s-microservices && dotnet restore
 script:
-  - dotnet build
-  - echo $AWS_USERNAME
+  - dotnet build -c Release
+deploy:
+  - provider: script
+    script: ./deploy.sh $TRAVIS_TAG $DOCKER_USERNAME $DOCKER_PASSWORD
+ 
