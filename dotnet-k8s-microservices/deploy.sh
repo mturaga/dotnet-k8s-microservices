@@ -1,5 +1,4 @@
 #!/bin/bash
-set -ev
 
 TAG=$1
 DOCKER_USERNAME=$2
