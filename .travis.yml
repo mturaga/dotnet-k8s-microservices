@@ -10,7 +10,7 @@ install:
   - cd dotnet-k8s-microservices && dotnet restore
 script:
   - dotnet build -c Release
-  - ls
+  - cat ./deploy.sh
 deploy:
   - provider: script
     script: deploy.sh $TRAVIS_TAG $DOCKER_USERNAME $DOCKER_PASSWORD
