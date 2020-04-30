@@ -8,6 +8,5 @@ install:
   - cd dotnet-k8s-microservices && dotnet restore
 script:
   - docker build .
-  - docker tag productsapi:dev productsapi:latest
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-  - docker push productsapi:latest
+  - docker push mturaga/productsapi:latest
