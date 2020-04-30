@@ -6,3 +6,4 @@ install:
   - cd dotnet-k8s-microservices && dotnet restore
 script:
   - dotnet build
+  - echo $AWS_USERNAME
