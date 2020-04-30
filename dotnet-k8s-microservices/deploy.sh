@@ -1,13 +1,14 @@
 #!/bin/bash
 
-TAG=$1
-DOCKER_USERNAME=$2
-DOCKER_PASSWORD=$3
+echo "Hello world!!"
+# TAG=$1
+# DOCKER_USERNAME=$2
+# DOCKER_PASSWORD=$3
 
-echo $1
+# echo $1
 
-# Create publish artifact
-dotnet publish -c Release src
+# # Create publish artifact
+# dotnet publish -c Release src
 
 # # Build the Docker images
 # docker build -t repository/project:$TAG src/bin/Release/netcoreapp1.0/publish/.
