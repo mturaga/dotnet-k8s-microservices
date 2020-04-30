@@ -4,8 +4,6 @@ services:
 mono: none
 dist: xenial
 dotnet: 3.1
-before_script:
-  - chmod a+x ./deploy.sh
 install:
   - cd dotnet-k8s-microservices && dotnet restore
 script:
@@ -13,6 +11,6 @@ script:
   - cat ./deploy.sh
 deploy:
   - provider: script
-    script: deploy.sh $TRAVIS_TAG $DOCKER_USERNAME $DOCKER_PASSWORD
+    script:script: chmod +x ./deploy.sh && ./deploy.sh $TRAVIS_TAG $DOCKER_USERNAME $DOCKER_PASSWORD
     on:
       branch: travis
