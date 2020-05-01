@@ -30,7 +30,8 @@ namespace Products.API.Controllers
             return Enumerable.Range(1, 3).Select(index => new Product
             {
                 Id = Guid.NewGuid().ToString(),
-                ProductName = Summaries[index-1]
+                ProductName = Summaries[index-1],
+                Quantity = Math.Abs(rng.Next() * index)
             })
             .ToArray();
         }
