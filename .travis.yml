@@ -1,0 +1,14 @@
+language: csharp
+services:
+  - docker
+mono: none
+dist: xenial
+dotnet: 3.1
+install:
+  - cd dotnet-k8s-microservices && dotnet restore
+script:
+  - docker image build -t productsapi:dev .
+  - docker images
+  - docker tag productsapi:dev mturaga/productsapi:latest
+  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  - docker push mturaga/productsapi:latest
