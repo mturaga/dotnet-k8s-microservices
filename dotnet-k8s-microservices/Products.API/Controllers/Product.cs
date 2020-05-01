@@ -13,7 +13,7 @@ namespace Products.API.Controllers
     {
         private static readonly string[] Summaries = new[]
         {
-            "Oranges", "Apple", "PineApple"
+            "Orange", "Apple", "PineApple"
         };
 
         private readonly ILogger<Product> _logger;
