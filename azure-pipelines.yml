@@ -24,7 +24,7 @@ stages:
         containerRegistry: 'docker-conn'
         command: build
         dockerfile: '$(Build.SourcesDirectory)/dotnet-k8s-microservices/Dockerfile'
-        arguments: '-t mturaga/products:$(Build.BuildId)'        
+        arguments: '-t mturaga/productsapi:$(Build.BuildId)'        
     - task: Docker@2
       inputs:
         containerRegistry: 'docker-conn'
