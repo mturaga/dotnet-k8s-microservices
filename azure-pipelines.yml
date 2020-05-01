@@ -28,5 +28,5 @@ stages:
     - task: Docker@2
       inputs:
         containerRegistry: 'docker-conn'
-        repository: 'mturaga/productsapi:$(Build.BuildId)'
+        repository: 'mturaga/productsapi:latest'
         command: 'push'
