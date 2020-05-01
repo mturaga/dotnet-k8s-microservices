@@ -24,7 +24,7 @@ stages:
         command: build
         dockerfile: '$(Build.SourcesDirectory)/dotnet-k8s-microservices/Dockerfile'
         tags: |
-          $(tag)
+          ammarg52/product-api:latest
     - task: Docker@2
       inputs:
         containerRegistry: 'docker-conn'
