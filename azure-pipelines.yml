@@ -22,10 +22,9 @@ stages:
       displayName: Build an image
       inputs:
         command: build
-        dockerfile: '$(Build.SourcesDirectory)/dotnet-k8s-microservices/Dockerfile'        
-        arguments: "-t mturaga/productsapi:$(Build.BuildId)"
+        dockerfile: '$(Build.SourcesDirectory)/dotnet-k8s-microservices/Dockerfile'
     - task: Docker@2
       inputs:
         containerRegistry: 'docker-conn'
-        repository: 'mturaga/productsapi:$(Build.BuildId)'
+        repository: 'mturaga/productsapi'
         command: 'push'
