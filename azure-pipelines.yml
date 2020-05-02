@@ -30,3 +30,4 @@ stages:
         containerRegistry: 'docker-conn'
         repository: '$(docker-repo-name)'
         command: 'push'
+        tags: 'azure-devops-$(Build.BuildId)'
