@@ -31,4 +31,4 @@ stages:
         repository: '$(docker-repo-name)'        
         command: 'push'
         tags: |
-          'latest'
+          latest
