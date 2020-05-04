@@ -29,5 +29,5 @@ stages:
       inputs:
         containerRegistry: 'docker-conn'
         repository: '$(docker-repo-name)'
-        arguments: 'latest'
+        arguments: '$(docker-repo-name) name:latest'
         command: 'push'
