@@ -24,9 +24,9 @@ stages:
         containerRegistry: 'docker-conn'
         command: build
         dockerfile: '$(Build.SourcesDirectory)/dotnet-k8s-microservices/Dockerfile'
-        arguments: '-t $(docker-repo-name):$(Build.BuildId)'
+        arguments: '-t $(docker-repo-name):latest'
     - task: Docker@2
       inputs:
         containerRegistry: 'docker-conn'
-        repository: '$(docker-repo-name)'
+        repository: '$(docker-repo-name):latest'
         command: 'push'
