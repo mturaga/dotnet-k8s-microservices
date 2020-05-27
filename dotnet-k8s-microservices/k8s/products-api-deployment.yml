@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: products-api-deployment
+spec:
+  selector:
+    matchLabels:
+      run: products-api
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: products-api
+    spec:
+      containers:
+      - name: products-api
+        image: ammarg52/product-api
+        ports:
+        - containerPort: 80
